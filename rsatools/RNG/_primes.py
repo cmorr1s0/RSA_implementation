@@ -4,6 +4,7 @@ Generate random prime numbers using functions from numpy and sympy.
 """
 
 from numpy.random import PCG64, Generator, BitGenerator, RandomState
+from numpy import uint64
 from sympy.ntheory.generate import nextprime, prevprime
 
 class PrimeGenerator(Generator):
@@ -45,7 +46,7 @@ class PrimeGenerator(Generator):
         if low >= high:
             return
         low, high = map(int, (low, high))
-        n = self.integers(low, high)
+        n = self.integers(low, high, dtype=uint64)
         p = nextprime(n)
         if p >= high:
             p = prevprime(high)
