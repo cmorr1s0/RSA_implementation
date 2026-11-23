@@ -1,5 +1,5 @@
 try:
-    from RNG import *
+    from rsatools.RNG import *
     print("Import successful!")
 
 except ImportError:
