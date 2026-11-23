@@ -47,7 +47,11 @@ _decode_ascii = {num.to_bytes(): num.to_bytes().decode("ascii") for num in range
 
 _encode_table = {**_encode_ascii, **_encode_emoji}
 
-_decode_table = {**_decode_emoji, **_decode_ascii}
+_decode_table = {
+    **_decode_emoji, **_decode_ascii, 
+    **{key+128: value for key, value in _decode_ascii}, 
+    **{key+128: value for key, value in _decode_emoji}
+}
 
 def emoji_encode(text: str) -> tuple:
     # example encoder that converts ints to letters
