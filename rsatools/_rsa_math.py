@@ -113,7 +113,7 @@ def inverse257(n: int) -> int:
         # s is already positive
 
     elif s0<0:
-        return int(s0+int(abs(n)/r0))
+        return int(s0+int(n//r0))
         # we find the *other* minimal bezout coefficients
         # so that s is positive and t is negative
 
