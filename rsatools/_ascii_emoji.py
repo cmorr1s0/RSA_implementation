@@ -43,7 +43,7 @@ _encode_ascii = {num.to_bytes().decode("ascii"): num.to_bytes() for num in range
 # _decode_ascii_bytes = [num.to_bytes() for num in range(32, 127)]
 # _decode_ascii = {byte: str(byte.decode("ascii")) for byte in _decode_ascii_bytes}
 
-_decode_ascii = {num.to_bytes().decode("ascii"): num.to_bytes() for num in range(32, 127)}
+_decode_ascii = {num.to_bytes(): num.to_bytes().decode("ascii") for num in range(32, 127)}
 
 _encode_table = {**_encode_ascii, **_encode_emoji}
 
