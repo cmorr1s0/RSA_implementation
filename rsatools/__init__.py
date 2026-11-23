@@ -1,4 +1,4 @@
-__all__ = ['inverse257', 'carmichael', 'PrimeGenerator', 'prime_rng', 'emoji_search_function']
+__all__ = ['inverse257', 'carmichael', 'PrimeGenerator', 'prime_rng', 'emoji_search_function', 'codecs']
 
 import codecs
 from ._rsa_math import inverse257, carmichael, modinverse
