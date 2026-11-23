@@ -5,6 +5,10 @@ Generating and counting primes.
 
 from sympy.ntheory.generate import nextprime, prevprime
 
+from numpy.random import Generator
+
+
+
 def randprime(a, b):
     """ Return a random prime number in the range [a, b).
 
