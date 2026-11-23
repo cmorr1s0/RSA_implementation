@@ -1,5 +1,3 @@
 # Ignore the pycache stuff from the RNG directory
-rsatools/__pycache__
-rsatools/RNG/__pycache__
-notebook/__pycache__
-rsatools/RNG/__pycache__/_primes.cpython-313.pyc
+__pycache__/
+*.py[cod]
