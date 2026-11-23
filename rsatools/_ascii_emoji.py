@@ -49,8 +49,8 @@ _encode_table = {**_encode_ascii, **_encode_emoji}
 
 _decode_table = {
     **_decode_emoji, **_decode_ascii, 
-    **{key+128: value for key, value in _decode_ascii}, 
-    **{key+128: value for key, value in _decode_emoji}
+    **{bytes.fromhex(hex(int(key.hex(), 16)+128)[2:]): _decode_emoji[key] for key in _decode_emoji}, 
+    **{bytes.fromhex(hex(int(key.hex(), 16)+128)[2:]): _decode_ascii[key] for key in _decode_ascii}
 }
 
 def emoji_encode(text: str) -> tuple:
