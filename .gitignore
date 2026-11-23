@@ -1,3 +1,4 @@
 # Ignore the pycache stuff from the RNG directory
-RNG/__pycache__/
+rsatools/__pycache__/
+rsatools/RNG/__pycache__/
 notebook/__pycache__/
