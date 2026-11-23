@@ -1,1 +1,1 @@
-from _primes import *
+from ._primes import *

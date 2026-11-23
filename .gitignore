@@ -1,0 +1,2 @@
+# Ignore the pycache stuff from the RNG directory
+RNG/__pycache__/
