@@ -57,6 +57,7 @@ def emoji_encode(text: str) -> tuple:
 def emoji_decode(binary: bytes) -> tuple:
     # example decoder that converts letters to ints
     # see https://docs.python.org/3/library/codecs.html#codecs.Codec.decode
+    for x in binary: print(x)
     return ''.join(_decode_table[x.to_bytes()] for x in binary), len(binary)
 
 def emoji_search_function(encoding_name):
