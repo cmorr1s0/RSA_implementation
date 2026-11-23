@@ -62,7 +62,7 @@ def modinverse(a: int, n: int) -> int:
         # s is already positive
 
     elif s0<0:
-        return s0+int(n//r0)
+        return s0+(n//r0)
         # we find the *other* minimal bezout coefficients
         # so that s is positive and t is negative
 
