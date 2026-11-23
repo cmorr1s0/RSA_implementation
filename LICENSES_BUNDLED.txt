@@ -1,4 +1,4 @@
-The files under the directory RNG/ 
+The files under the directory rsatools/RNG/ 
 are all directly derived from the sympy and numpy projects in some way.  
 
 --------------------------------------------------------------------------------
