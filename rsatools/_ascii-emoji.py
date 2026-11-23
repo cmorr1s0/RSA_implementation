@@ -60,6 +60,6 @@ def emoji_decode(binary: bytes) -> tuple:
     return ''.join(_decode_table[x.to_bytes()] for x in binary), len(binary)
 
 def emoji_search_function(encoding_name):
-    return codecs.CodecInfo(emoji_encode, emoji_decode, name="emoji_ascii")
+    return codecs.CodecInfo(emoji_encode, emoji_decode, name="ascii-emoji")
 
 #codecs.register(emoji_search_function)
