@@ -7,16 +7,19 @@ from numpy.random import PCG64, Generator, BitGenerator, RandomState
 from sympy.ntheory.generate import nextprime, prevprime
 
 class PrimeGenerator(Generator):
-    """Docstring goes here!"""
+    """An extension of the np.random.Generator class, with the ``primes()`` method.
+
+    This class uses code from numpy and sympy.
+    """
 
     def __init__(self, bit_generator):
         Generator.__init__(self, bit_generator)
 
-    def randprime(self, a, b):
-        """ Return a random prime number in the range [a, b).
+    def randprime(self, low, high):
+        """ Return a random prime number in the range [low, high).
 
             Bertrand's postulate assures that
-            randprime(a, 2*a) will always succeed for a > 1.
+            randprime(low, 2*low) will always succeed for low > 1.
 
             Note that due to implementation difficulties,
             the prime numbers chosen are not uniformly random.
@@ -33,25 +36,20 @@ class PrimeGenerator(Generator):
             >>> isprime(randprime(1, 30))
             True
 
-            See Also
-            ========
-
-            primerange : Generate all primes in a given range
-
             References
             ==========
 
             .. [1] https://en.wikipedia.org/wiki/Bertrand's_postulate
 
         """
-        if a >= b:
+        if low >= high:
             return
-        a, b = map(int, (a, b))
-        n = randint(a - 1, b)
+        low, high = map(int, (low, high))
+        n = self.integers(low, high)
         p = nextprime(n)
-        if p >= b:
-            p = prevprime(b)
-        if p < a:
+        if p >= high:
+            p = prevprime(high)
+        if p < low:
             raise ValueError("no primes exist in the specified range")
         return p
 
