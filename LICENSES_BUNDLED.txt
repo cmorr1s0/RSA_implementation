@@ -1,5 +1,8 @@
 The files under the directory RNG/ 
-are modified from sympy and use numpy as a dependency.  
+are all directly derived from the sympy and numpy projects in some way.  
+
+--------------------------------------------------------------------------------
+
 Code from the sympy project is licensed as:
 
 Copyright (c) 2006-2023 SymPy Development Team
@@ -30,6 +33,8 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
 LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
 OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
 DAMAGE.
+
+--------------------------------------------------------------------------------
 
 Additionally, code from the numpy project is licensed as:
 
