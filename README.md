@@ -4,7 +4,17 @@ This repository documents my efforts to create a demonstration of the RSA encryp
 
 ## Structure:
 
-I will use Jupyter Notebooks to test new code and for rapid development reasons.  Those files will live in the "notebook" directory.  Later, I'll also need to make a distributable product for the class.  Those files will live in some other, yet unnamed directory.  
+I will use Jupyter Notebooks to test new code and for rapid development reasons.  Those files will live in the "notebook" directory.  
+
+All the finished functions and other tools I've created will be put into .py files.  Those files will live in the "rsatools" directory, and they can be imported into other python files using `from rsatools import *` or other import syntax. 
+
+Later, I'll also need to make a distributable product for the class.  Those files will live in some other, yet unnamed directory.  
+
+## Notes on Licencing
+
+Some of the code in this repo was copied or otherwise derived from the numpy and sympy projects.  That code is licensed under the 3 clause BSD licence.  Modifications made to that code, i.e., anything in this repository which was not in the numpy or sympy respositories as of 11/23/2026, is licenced under the GPL v2.  All other code in this repository is licenced under GPL v2.  
+
+In the case that you would like to use code from the numpy and scipy projects, as allowed under the 3 clause BSD licence, the author of this repository suggests looking to the source code for numpy and scipy.  Code in those repositories is guaranteed to be licenced under 3 clause BSD, while code in this repo is not.
 
 ## Profanity Notice
 
